@@ -14,8 +14,10 @@ def first_challenge
   }
 
   #your code here
-  contacts["Jon Snow"][:favorite_icecream_flavors] << "mint chip"
-  contacts["Jon Snow"][:address] = "The Lord Commander's ROoms, The Wall, Westeros"
+  contacts.each do |person, data|
+    data.each do |attribute, value|
+      if value == :favorite_icecream_flavors
+        delete_if
   #remember to return your newly altered contacts hash!
   contacts
 end
